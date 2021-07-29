@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    hiintegrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-image: url("/wakeupcafe-main/public/images/contactback.jpg");
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+
+    #nav-bar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .navbar {
+      background-image: linear-gradient(to right, #d2691e, #cd5c5c);
+      padding: 1px !important;
+    }
+
+    .navbar img {
+      width: 40%;
+    }
+
+    .navbar-nav li {
+      padding: 0 10px;
+
+    }
+
+    .navbar-nav li a {
+      color: #fff !important;
+      font-weight: 600;
+    }
+
+    input[type=text],
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid rgb(238, 165, 81);
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+
+    input[type=submit] {
+      background-color: #743b05;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+      background-color: #9c3c04;
+
+
+    }
+
+    .containercon {
+      padding-top: 50px;
+      padding-bottom: 50px;
+      border-radius: 5px;
+      background-color: #d18b2f;
+      padding-left: 100px;
+      padding-right: 100px;
+      margin-left: 150px;
+      margin-right: 150px;
+
+
+    }
+
+    h1 {
+
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light ">
+      <a class="navbar-brands" href="#"><img src="images/logo.png"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="home.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="places.ejs">Places</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="coffeee.ejs">Coffee's</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="contact-us.html">Contacts</a>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <br>
+  <br>
+  <br>
+  <br>
+  <h1>Contact Form</h1>
+  <br>
+  <br>
+  <br>
+
+
+  <div class="containercon">
+    <form action="">
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Write something.." style="height:100px"></textarea>
+
+      <input type="submit" value="Submit">
+
+      <script>
+        $(document).ready(function () {
+          $("#submit").click(function () {
+            var firstname = $("#firstname").val();
+            var lastname = $("#lastname").val();
+            var message = $("#message").val();
+            if (firstname == "") {
+              alert("Please enter your first name!");
+            }
+            else if (lastname == "") {
+              alert("Please enter your last name!");
+            }
+            else if (message == "") {
+              alert("Please enter your message!");
+            }
+            else {
+              alert("Thank you " + firstname + " " + lastname + ", we will get in touch soon.");
+            }
+          });
+        });
+      </script>
+    </form>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Coffee Places</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.comment.js"></script>
+    <link rel="stylesheet" href="/css/style1.css" type="text/css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        hiintegrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+
+
+        <nav class="navbar navbar-expand-lg navbar-light ">
+            <a class="navbar-brands" href="#"><img src="images/logo.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="places.ejs">Places</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="coffeee.ejs">Coffee's</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="contact-us.html">Contacts</a>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <br>
+    <br>
+    <br>
+    <div class="conbanner">
+        <div class="placebanner">
+            <p>Auckland has many wonderful cafes that offer an insanely good breakfast with your favourite coffee drink.
+                If
+                you are in the city and looking for the best cafes in Auckland, we have listed them here for you.</p>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Image</th>
+            <th>Rating</th>
+        </tr>
+
+        <tr>
+            <td>
+                <%= data[0].name %>
+            </td>
+            <td>
+                <%= data[0].Detail %>
+            </td>
+            <td><img src="<%= data[0].Image %>" /></td>
+            <td>
+                <form class="rating">
+                    <label>
+                        <input id="button1" type="radio" name="stars" value="Rate: 1.0★">
+                        <span class="icon">★</span>
+                    </label>
+                    <label>
+                        <input id="button2" type="radio" name="stars" value="Rate: 2.0★">
+                        <span class="icon">★</span>
+                    </label>
+                    <label>
+                        <input id="button3" type="radio" name="stars" value="Rate: 3.0★">
+                        <span class="icon">★</span>
+                    </label>
+                    <label>
+                        <input id="button4" type="radio" name="stars" value="Rate: 4.0★">
+                        <span class="icon">★</span>
+                    </label>
+                    <label>
+                        <input id="button5" type="radio" name="stars" value="Rate: 5.0★">
+                        <span class="icon">★</span>
+                    </label>
+                </form><br>
+                <p id="display"></p><br>
+                <script>
+                    $(document).ready(function () {
+                        $('#button1').hide();
+                        $('#button2').hide();
+                        $('#button3').hide();
+                        $('#button4').hide();
+                        $('#button5').hide();
+
+                        $('#button1').click(function () {
+                            $('#display').empty();
+                            var one = $(this).val();
+                            $('#display').append(one);
+                        });
+                        $('#button2').click(function () {
+                            $('#display').empty();
+                            var one = $(this).val();
+                            $('#display').append(one);
+                        });
+                        $('#button3').click(function () {
+                            $('#display').empty();
+                            var one = $(this).val();
+                            $('#display').append(one);
+                        });
+                        $('#button4').click(function () {
+                            $('#display').empty();
+                            var one = $(this).val();
+                            $('#display').append(one);
+                        });
+                        $('#button5').click(function () {
+                            $('#display').empty();
+                            var one = $(this).val();
+                            $('#display').append(one);
+                        });
+                    })
+                </script>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <%= data[1].name %>
+            </td>
+            <td>
+                <%= data[1].Detail %>
+            </td>
+            <td><img src="<%= data[1].Image %>" /></td>
+            <td>
+                <form class="rating">
+                    <label>
+                        <input id="button6" type="radio" name="stars" value="Rate: 1.0★">
+                        <span class="icon">★</span>
+                    </label>
+                    <label>
+                        <input id="button7" type="radio" name="stars" value="Rate: 2.0★">
+                        <span class="icon">★</span>
+                    </label>
+                    <label>
+                        <input id="button8" type="radio" name="stars" value="Rate: 3.0★">
+                        <span class="icon">★</span>
+                    </label>
+                    <label>
+                        <input id="button9" type="radio" name="stars" value="Rate: 4.0★">
+                        <span class="icon">★</span>
+                    </label>
+                    <label>
+                        <input id="button10" type="radio" name="stars" value="Rate: 5.0★">
+                        <span class="icon">★</span>
+                    </label>
+                </form><br>
+                <p id="display2"></p><br>
+                <script>
+
+                    $(document).ready(function () {
+                        $('#button6').hide();
+                        $('#button7').hide();
+                        $('#button8').hide();
+                        $('#button9').hide();
+                        $('#button10').hide();
+
+                        $('#button6').click(function () {
+                            $('#display2').empty();
+                            var one = $(this).val();
+                            $('#display2').append(one);
+                        });
+                        $('#button7').click(function () {
+                            $('#display2').empty();
+                            var one = $(this).val();
+                            $('#display2').append(one);
+                        });
+                        $('#button8').click(function () {
+                            $('#display2').empty();
+                            var one = $(this).val();
+                            $('#display2').append(one);
+                        });
+                        $('#button9').click(function () {
+                            $('#display2').empty();
+                            var one = $(this).val();
+                            $('#display2').append(one);
+                        });
+                        $('#button10').click(function () {
+                            $('#display2').empty();
+                            var one = $(this).val();
+                            $('#display2').append(one);
+                        });
+                    })
+                </script>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <%= data[2].name %>
+            </td>
+            <td>
+                <%= data[2].Detail %>
+            </td>
+            <td><img src="<%= data[2].Image %>" /></td>
+            <td>
+                <form class="rating">
+                    <label>
+                        <input id="button11" type="radio" name="stars" value="Rate: 1.0★">
+                        <span class="icon">★</span>
+                    </label>
+                    <label>
+                        <input id="button12" type="radio" name="stars" value="Rate: 2.0★">
+                        <span class="icon">★</span>
+                    </label>
+                    <label>
+                        <input id="button13" type="radio" name="stars" value="Rate: 3.0★">
+                        <span class="icon">★</span>
+                    </label>
+                    <label>
+                        <input id="button14" type="radio" name="stars" value="Rate: 4.0★">
+                        <span class="icon">★</span>
+                    </label>
+                    <label>
+                        <input id="button15" type="radio" name="stars" value="Rate: 5.0★">
+                        <span class="icon">★</span>
+                    </label>
+                </form><br>
+                <p id="display3"></p><br>
+                <script>
+
+                    $(document).ready(function () {
+                        $('#button11').hide();
+                        $('#button12').hide();
+                        $('#button13').hide();
+                        $('#button14').hide();
+                        $('#button15').hide();
+
+                        $('#button11').click(function () {
+                            $('#display3').empty();
+                            var one = $(this).val();
+                            $('#display3').append(one);
+                        });
+                        $('#button12').click(function () {
+                            $('#display3').empty();
+                            var one = $(this).val();
+                            $('#display3').append(one);
+                        });
+                        $('#button13').click(function () {
+                            $('#display3').empty();
+                            var one = $(this).val();
+                            $('#display3').append(one);
+                        });
+                        $('#button14').click(function () {
+                            $('#display3').empty();
+                            var one = $(this).val();
+                            $('#display3').append(one);
+                        });
+                        $('#button15').click(function () {
+                            $('#display3').empty();
+                            var one = $(this).val();
+                            $('#display3').append(one);
+                        });
+                    })
+                </script>
+
+
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <%= data[3].name %>
+            </td>
+            <td>
+                <%= data[3].Detail %>
+            </td>
+            <td><img src="<%= data[3].Image %>" /></td>
+            <td>
+                <form class="rating">
+                    <label>
+                        <input id="button16" type="radio" name="stars" value="Rate: 1.0★">
+                        <span class="icon">★</span>
+                    </label>
+                    <label>
+                        <input id="button17" type="radio" name="stars" value="Rate: 2.0★">
+                        <span class="icon">★</span>
+                    </label>
+                    <label>
+                        <input id="button18" type="radio" name="stars" value="Rate: 3.0★">
+                        <span class="icon">★</span>
+                    </label>
+                    <label>
+                        <input id="button19" type="radio" name="stars" value="Rate: 4.0★">
+                        <span class="icon">★</span>
+                    </label>
+                    <label>
+                        <input id="button20" type="radio" name="stars" value="Rate: 5.0★">
+                        <span class="icon">★</span>
+                    </label>
+                </form><br>
+                <p id="display4"></p><br>
+                <script>
+
+
+                    $(document).ready(function () {
+                        $('#button16').hide();
+                        $('#button17').hide();
+                        $('#button18').hide();
+                        $('#button19').hide();
+                        $('#button20').hide();
+
+                        $('#button16').click(function () {
+                            $('#display4').empty();
+                            var one = $(this).val();
+                            $('#display4').append(one);
+                        });
+                        $('#button17').click(function () {
+                            $('#display4').empty();
+                            var one = $(this).val();
+                            $('#display4').append(one);
+                        });
+                        $('#button18').click(function () {
+                            $('#display4').empty();
+                            var one = $(this).val();
+                            $('#display4').append(one);
+                        });
+                        $('#button19').click(function () {
+                            $('#display4').empty();
+                            var one = $(this).val();
+                            $('#display4').append(one);
+                        });
+                        $('#button20').click(function () {
+                            $('#display4').empty();
+                            var one = $(this).val();
+                            $('#display4').append(one);
+                        });
+                    })
+                </script>
+
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <%= data[4].name %>
+            </td>
+            <td>
+                <%= data[4].Detail %>
+            </td>
+            <td><img src="<%= data[4].Image %>" /></td>
+            <td>
+                <form class="rating">
+                    <label>
+                        <input id="button21" type="radio" name="stars" value="Rate: 1.0★">
+                        <span class="icon">★</span>
+                    </label>
+                    <label>
+                        <input id="button22" type="radio" name="stars" value="Rate: 2.0★">
+                        <span class="icon">★</span>
+                    </label>
+                    <label>
+                        <input id="button23" type="radio" name="stars" value="Rate: 3.0★">
+                        <span class="icon">★</span>
+                    </label>
+                    <label>
+                        <input id="button24" type="radio" name="stars" value="Rate: 4.0★">
+                        <span class="icon">★</span>
+                    </label>
+                    <label>
+                        <input id="button25" type="radio" name="stars" value="Rate: 5.0★">
+                        <span class="icon">★</span>
+                    </label>
+                </form><br>
+                <p id="display5"></p><br>
+
+                <script>
+                    $(document).ready(function () {
+                        $('#button21').hide();
+                        $('#button22').hide();
+                        $('#button23').hide();
+                        $('#button24').hide();
+                        $('#button25').hide();
+
+                        $('#button21').click(function () {
+                            $('#display5').empty();
+                            var one = $(this).val();
+                            $('#display5').append(one);
+                        });
+                        $('#button22').click(function () {
+                            $('#display5').empty();
+                            var one = $(this).val();
+                            $('#display5').append(one);
+                        });
+                        $('#button23').click(function () {
+                            $('#display5').empty();
+                            var one = $(this).val();
+                            $('#display5').append(one);
+                        });
+                        $('#button24').click(function () {
+                            $('#display5').empty();
+                            var one = $(this).val();
+                            $('#display5').append(one);
+                        });
+                        $('#button25').click(function () {
+                            $('#display5').empty();
+                            var one = $(this).val();
+                            $('#display5').append(one);
+                        });
+                    })
+                </script>
+
+
+
+            </td>
+        </tr>
+    </table>
+    <br>
+
+    </section>
+
+    <footer>
+        <section id=social-media" style="padding: 100px">
+            <div class="container text-center">
+                <p><b>FIND US ON SOCIAL MEDIA<b></p>
+                <div class="social-icons">
+                    <a href="#"> <img src="images/instagram.png"></a>
+                    <a href="#"> <img src="images/twitter.png"></a>
+                    <a href="#"> <img src="images/whatsapp.png"></a>
+                    <a href="#"> <img src="images/facebook.png"></a>
+                </div>
+            </div>
+        </section>
+
+    </footer>
+
+    <script src="/public/js/places.js"></script>
+</body>
+
+</html>
